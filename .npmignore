@@ -1,2 +1,5 @@
 node_modules
 .vscode
+template-output
+.env
+*.zip
