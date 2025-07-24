@@ -1,0 +1,14 @@
+{
+  "name": "devkart-ft",
+  "version": "1.0.1",
+  "description": "DevKart starter CLI for Next.js or React with Tailwind and ShadCN",
+  "bin": {
+    "devkart-ft": "./bin/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "execa": "^8.0.1",
+    "fs-extra": "^11.3.0",
+    "prompts": "^2.4.2"
+  }
+}
