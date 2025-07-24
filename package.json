@@ -1,6 +1,6 @@
 {
   "name": "devkart-ft",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "DevKart starter CLI for Next.js or React with Tailwind and ShadCN",
   "bin": {
     "devkart-ft": "./bin/index.js"
