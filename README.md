@@ -109,7 +109,7 @@ Found a bug or want to suggest a feature?
 ## 📄 License
 
 MIT License
-© [DevKart](https://github.com/dev-kart/devkart-ft/LICENSE)
+© [DevKart](https://github.com/dev-kart/devkart-ft/blob/main/LICENSE)
 
 ---
 
