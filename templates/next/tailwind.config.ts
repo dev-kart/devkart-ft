@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -89,9 +94,6 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -108,7 +110,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate")],
 };
 
 export default config;
