@@ -22,7 +22,7 @@ Built for speed, best practices, and developer joy. Choose your stack and start 
 
 ```bash
 npx devkart-ft
-````
+```
 
 *or, if installed globally:*
 
@@ -30,32 +30,43 @@ npx devkart-ft
 devkart-ft
 ```
 
+> **Note**: If you encounter dependency warnings during installation, the CLI automatically uses `--legacy-peer-deps` to ensure compatibility.
+
+---
+
+## 🔧 Recent Updates (v1.0.6)
+
+- **Fixed**: Resolved React version conflicts and dependency issues
+- **Improved**: Better error handling and user feedback
+- **Updated**: All dependencies to latest stable versions
+- **Enhanced**: Consistent package versions across templates
+
 ---
 
 ## 🛠️ What It Does
 
 1. Prompts you to choose between:
 
-   * **React + Vite**
-   * **Next.js (App Router)**
+   - **React + Vite**
+   - **Next.js (App Router)**
 
 2. Sets up the project with:
 
-   * **TypeScript**
-   * **Tailwind CSS**
-   * **ShadCN UI**
-   * **Prebuilt ShadCN components**
+   - **TypeScript**
+   - **Tailwind CSS**
+   - **ShadCN UI**
+   - **Prebuilt ShadCN components**
 
 3. Cleans up:
 
-   * Default files, folders (`assets`, unused CSS, public files)
-   * Example boilerplate code
+   - Default files, folders (`assets`, unused CSS, public files)
+   - Example boilerplate code
 
 4. Initializes a fresh layout:
 
-   * Clean `App.tsx` / `page.tsx`
-   * Theme toggle (dark/light)
-   * Basic folder structure
+   - Clean `App.tsx` / `page.tsx`
+   - Theme toggle (dark/light)
+   - Basic folder structure
 
 5. Done. Run it and start building.
 
@@ -63,7 +74,7 @@ devkart-ft
 
 ## 🗂 Example Structure
 
-```
+```text
 my-project/
 ├── app/ or src/
 │   ├── components/         # ShadCN UI components
@@ -80,22 +91,22 @@ my-project/
 
 ## 🎨 What's Included
 
-* [x] **Next.js or React** (you choose)
-* [x] **TypeScript** preconfigured
-* [x] **Tailwind CSS v4**
-* [x] **ShadCN UI**
-* [x] **Dark / Light Theme support**
-* [x] **Essential ShadCN components** preinstalled
+- [x] **Next.js or React** (you choose)
+- [x] **TypeScript** preconfigured
+- [x] **Tailwind CSS v3**
+- [x] **ShadCN UI**
+- [x] **Dark / Light Theme support**
+- [x] **Essential ShadCN components** preinstalled
 
 ---
 
 ## 📚 Resources
 
-* [Next.js Docs](https://nextjs.org/docs)
-* [React Docs](https://react.dev/learn)
-* [Tailwind CSS Docs](https://tailwindcss.com/docs)
-* [ShadCN UI](https://ui.shadcn.dev/)
-* [Devkart FT Homepage](https://devkart.me/devkart-ft)
+- [Next.js Docs](https://nextjs.org/docs)
+- [React Docs](https://react.dev/learn)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [ShadCN UI](https://ui.shadcn.dev/)
+- [Devkart FT Homepage](https://devkart.me/devkart-ft)
 
 ---
 

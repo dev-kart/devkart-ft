@@ -30,18 +30,48 @@ async function run() {
   const targetDir = path.resolve(process.cwd(), projectName);
   const templateDir = path.join(__dirname, `../templates/${framework}`);
 
+  // Check if directory already exists
+  if (await fs.pathExists(targetDir)) {
+    console.error(
+      `❌ Directory "${projectName}" already exists. Please choose a different name.`
+    );
+    process.exit(1);
+  }
+
   console.log(`\n📁 Copying ${framework} template...`);
   await fs.copy(templateDir, targetDir);
 
   process.chdir(targetDir);
   console.log("📦 Installing dependencies...");
-  await execa("npm", ["install"], { stdio: "inherit" });
 
-  console.log(`\n✅ Project ${projectName} is ready.`);
-  console.log(`\n👉 cd ${projectName} && npm run dev`);
+  try {
+    // Use legacy-peer-deps to avoid dependency conflicts
+    await execa("npm", ["install", "--legacy-peer-deps"], { stdio: "inherit" });
+
+    console.log(`\n✅ Project ${projectName} is ready!`);
+    console.log(`\n👉 Next steps:`);
+    console.log(`   cd "${projectName}"`);
+    console.log(`   npm run dev`);
+
+    if (framework === "next") {
+      console.log(
+        `\n🌐 Your Next.js app will be available at: http://localhost:3000`
+      );
+    } else {
+      console.log(
+        `\n🌐 Your React app will be available at: http://localhost:5173`
+      );
+    }
+  } catch (error) {
+    console.error("\n❌ Failed to install dependencies. You can try:");
+    console.error(`   cd "${projectName}"`);
+    console.error("   npm install --legacy-peer-deps");
+    console.error("   npm run dev");
+    throw error;
+  }
 }
 
 run().catch((err) => {
-  console.error("❌ Failed to create project:", err);
+  console.error("❌ Failed to create project:", err.message);
   process.exit(1);
 });
